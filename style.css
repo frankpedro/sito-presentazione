@@ -80,6 +80,8 @@ body {
   border-radius: 22px;
   box-shadow: 0 8px 32px 0 rgba(31,38,135,0.22);
   border: 1px solid #805ad5;
+  overflow-y: auto;  /* abilita scrolling verticale */
+  max-height: 70vh;  /* limita altezza massima per evitare contenuti fuori schermo */
 }
 .tabs {
   display: flex;
@@ -204,10 +206,92 @@ ul li::before {
   .container { padding: 16px 4px; }
   .services { flex-direction: column; align-items: stretch; }
   .card { min-width: unset; }
-  .hero-animated-title { font-size: 1.25rem; }
-  .subtitle { font-size: 1rem; }
-  .tabs { flex-direction: column; }
+  .hero-animated-title { 
+    font-size: 1rem !important;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    padding: 0 5px;
+  }
+  .subtitle { 
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+  .tabs { 
+    flex-direction: column; 
+    gap: 8px;
+  }
   .main-centered { padding: 10px 2px 20px 2px; }
+  .hero {
+    padding: 10px 5px;
+  }
+
+  .hero.sticky {
+    min-height: 60px;
+    padding-left: 10px;
+    justify-content: center;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tab-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .main-centered {
+    margin: 20px 10px;
+    padding: 15px;
+    width: auto;
+    overflow-y: auto;
+    max-height: 70vh;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .contact-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .contact-photo img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 12px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
 }
 #vanta-bg {
   position: fixed;
@@ -271,5 +355,8 @@ ul li::before {
     width: 96px;
     height: 96px;
   }
+}
+.cursor {
+  font-size: 1.8rem;
 }
 
