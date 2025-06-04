@@ -355,8 +355,8 @@ ul li::before {
     width: 96px;
     height: 96px;
   }
-}
-.cursor {
-  font-size: 1.8rem;
+  .cursor {
+    font-size: 1.8rem;
+  }
 }
 
